@@ -1,11 +1,12 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class SumFirstNNaturalNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a positive integer Number: ");
+        boolean isValidInput = scanner.hasNextInt();
 
-        if (scanner.hasNextInt()) {
+        if (isValidInput) {
             int n = scanner.nextInt();
             if (n > 0) {
                 int sum = n * (n + 1) / 2;
@@ -16,7 +17,6 @@ public class SumFirstNNaturalNumbers {
         } else {
             System.out.println("Invalid input: please enter an integer.");
         }
-
         scanner.close();
     }
 }
