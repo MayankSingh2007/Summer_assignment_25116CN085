@@ -1,5 +1,6 @@
 import java.util.*;
 
+// This program calculates the sum of the first N natural numbers, where N is a positive integer input by the user.
 public class Q1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

@@ -1,7 +1,7 @@
 import java.util.*;
 
-// This program generates the multiplication table for a given positive integer input by the user.
-public class Q2 {
+// This program calculates the sum of the digits of a given integer input by the user using a recursive approach.
+public class Q4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -10,19 +10,10 @@ public class Q2 {
 
         if (isValidInput) {
             long n = scanner.nextLong();
-            long originalNumber = n;
+            boolean isNegative = n < 0;
+            long reversed = reverse(Math.abs(n), 0);
 
-            long reversed = 0;
-            if (n < 0) {
-                n = -n;
-            }
-
-            do {
-                reversed = reversed * 10 + (n % 10);
-                n /= 10;
-            } while (n != 0);
-
-            if (originalNumber < 0) {
+            if (isNegative) {
                 reversed = -reversed;
             }
 
@@ -32,5 +23,12 @@ public class Q2 {
         }
 
         scanner.close();
+    }
+
+    private static long reverse(long n, long reversed) {
+        if (n == 0) {
+            return reversed;
+        }
+        return reverse(n / 10, reversed * 10 + (n % 10));
     }
 }

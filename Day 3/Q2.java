@@ -1,5 +1,6 @@
 import java.util.*;
 
+// This program generates and displays all prime numbers within a specified range provided by the user.
 public class Q2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

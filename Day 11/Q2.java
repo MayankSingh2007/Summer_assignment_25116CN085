@@ -1,7 +1,7 @@
 import java.util.*;
 
-// This program calculates the greatest common divisor (GCD) of two integers input by the user using the Euclidean algorithm.
-public class Q4 {
+// This program takes two integer inputs from the user and calculates their sum, ensuring that the inputs are valid integers.
+public class Q2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -16,25 +16,8 @@ public class Q4 {
 
             if (isValidSecond) {
                 int b = scanner.nextInt();
-
-                int first = Math.abs(a);
-                int second = Math.abs(b);
-
-                if (first == 0 || second == 0) {
-                    System.out.println("LCM of the two numbers is: 0");
-                } else {
-                    int x = first;
-                    int y = second;
-
-                    while (y != 0) {
-                        int temp = y;
-                        y = x % y;
-                        x = temp;
-                    }
-
-                    long lcm = (long) first * second / x;
-                    System.out.println("LCM of the two numbers is: " + lcm);
-                }
+                int maximum = findMaximum(a, b);
+                System.out.println("Maximum of the two numbers is: " + maximum);
             } else {
                 System.out.println("Invalid input: please enter an integer for the second number.");
             }
@@ -43,5 +26,12 @@ public class Q4 {
         }
 
         scanner.close();
+    }
+
+    private static int findMaximum(int a, int b) {
+        if (a > b) {
+            return a;
+        }
+        return b;
     }
 }

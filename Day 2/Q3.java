@@ -1,5 +1,6 @@
 import java.util.*;
 
+// This program generates and displays the multiplication table for a given positive integer input by the user.
 public class Q3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

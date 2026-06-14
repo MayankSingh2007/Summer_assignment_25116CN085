@@ -1,7 +1,7 @@
 import java.util.*;
 
-// This program generates the multiplication table for a given positive integer input by the user.
-public class Q1 {
+// This program counts the number of set bits (1s) in the binary representation of a given integer input by the user.
+public class Q3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -15,14 +15,15 @@ public class Q1 {
                 n = -n;
             }
 
-            long sum = 0;
+            int count = 0;
+            long number = n;
 
-            do {
-                sum += n % 10;
-                n /= 10;
-            } while (n != 0);
+            while (number != 0) {
+                count += (number & 1L);
+                number >>= 1;
+            }
 
-            System.out.println("Sum of digits: " + sum);
+            System.out.println("Number of set bits: " + count);
         } else {
             System.out.println("Invalid input: please enter an integer.");
         }

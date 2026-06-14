@@ -1,11 +1,12 @@
 import java.util.*;
 
+// This program generates and displays the multiplication table for a given positive integer input by the user.
 public class Q4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter a number: ");
-        boolean isValidInput = scanner.hasNextLong();
+        boolean isValidInput= scanner.hasNextLong();
 
         if (isValidInput) {
             long n = scanner.nextLong();

@@ -1,5 +1,6 @@
 import java.util.*;
 
+// This program generates and displays the Fibonacci series up to a specified number of terms provided by the user.
 public class Q1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

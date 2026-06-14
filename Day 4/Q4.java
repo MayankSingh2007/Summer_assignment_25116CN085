@@ -1,5 +1,7 @@
 import java.util.*;
 
+
+// This program finds and displays all Armstrong numbers within a specified range provided by the user.
 public class Q4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

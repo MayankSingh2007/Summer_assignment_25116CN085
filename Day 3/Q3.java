@@ -1,5 +1,6 @@
 import java.util.*;
 
+// This program calculates the greatest common divisor (GCD) of two integers input by the user using the Euclidean algorithm.
 public class Q3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

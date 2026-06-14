@@ -1,8 +1,7 @@
-import java.math.BigInteger;
 import java.util.*;
 
-// This program calculates the factorial of a given positive integer input by the user, using BigInteger to handle large results.
-public class Q3 {
+// This program calculates the sum of the digits of a given integer input by the user using a recursive approach.
+public class Q1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -13,13 +12,8 @@ public class Q3 {
             int n = scanner.nextInt();
 
             if (n >= 0) {
-                BigInteger factorial = BigInteger.ONE;
-
-                for (int i = 2; i <= n; i++) {
-                    factorial = factorial.multiply(BigInteger.valueOf(i));
-                }
-
-                System.out.println("Factorial of " + n + " is: " + factorial);
+                long result = factorial(n);
+                System.out.println("Factorial of " + n + " is: " + result);
             } else {
                 System.out.println("Invalid input: number must be a non-negative integer.");
             }
@@ -28,5 +22,12 @@ public class Q3 {
         }
 
         scanner.close();
+    }
+
+    private static long factorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        return n * factorial(n - 1);
     }
 }

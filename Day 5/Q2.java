@@ -1,5 +1,6 @@
 import java.util.*;
 
+// This program checks if a given integer is a perfect number, which is a number that is equal to the sum of its proper divisors (excluding itself).
 public class Q2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

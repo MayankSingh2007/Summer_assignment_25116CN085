@@ -1,5 +1,6 @@
 import java.util.*;
 
+// This program finds the largest prime factor of a given integer input by the user.
 public class Q4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

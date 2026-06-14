@@ -1,5 +1,6 @@
 import java.util.*;
 
+// This program calculates the nth term of the Fibonacci sequence based on user input for the position of the term.
 public class Q2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
